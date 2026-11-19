@@ -159,11 +159,6 @@ section{padding:72px 0;border-top:1px solid var(--line)}
 .card p{color:#d0d0d8;font-size:15.5px}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:4px}
 .tag{font-family:var(--mono);font-size:11.5px;padding:3px 8px;border:1px solid #3a3a46;color:#d4d4dc;border-radius:2px}
-.card.wide{grid-column:1 / -1}
-.sims{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:6px}
-.sim{border-top:2px solid var(--red);padding-top:10px}
-.sim b{display:block;font-size:15px}
-.sim span{color:var(--muted);font-size:14px}
 
 .matrix{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
 .col{border:1px solid var(--line);background:var(--panel);padding:22px;border-radius:4px}
@@ -245,10 +240,8 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px}
 @media (max-width:900px){
   .hero-grid,.about{grid-template-columns:1fr;gap:32px}
   .cards,.matrix{grid-template-columns:1fr}
-  .sims{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:520px){
-  .sims{grid-template-columns:1fr}
   nav ul{display:none}
   .hero-title{-webkit-text-stroke-width:1.5px}
   .avatar{width:84px;height:84px;margin-bottom:14px}
@@ -531,9 +524,9 @@ location: Tashkent (on-site, hybrid, remote)</span>
     var reduceM=false;try{reduceM=window.matchMedia('(prefers-reduced-motion: reduce)').matches;}catch(e){}
     if(reduceM||document.hidden||!window.requestAnimationFrame||!document.body.closest){boot();return;}
 
-    var CONT='nav .wrap,.term,.mini > div,.box,.card,.col,.tbl-wrap,.sim,.stat';
-    var LEAF='nav .brand,nav li,nav .avail,nav .dispatch,.avatar,.hero-title,.hello,.name-tag,#role,.lede,.hero .btns .btn,.stat b,.stat span,.term-bar,.term pre,.mini .n,.mini b,.mini .d,.idx span,.eyebrow,h2,h3,.tab,.by,.no,.card p,.tag,.col .d,.sim b,.sim span,.box .k,.box .t,.box .s,.about p,th,td,#certs .wrap > p,#contact p,#contact .btns .btn,footer span';
-    var TYPEQ='.hello,.lede,.eyebrow,.idx span,h2,h3,.by,.card p,.about p,.col .d,.sim b,.sim span,.box .k,.box .t,.box .s,.mini .n,.mini b,.mini .d,#certs .wrap > p,#contact p';
+    var CONT='nav .wrap,.term,.mini > div,.box,.card,.col,.tbl-wrap,.stat';
+    var LEAF='nav .brand,nav li,nav .avail,nav .dispatch,.avatar,.hero-title,.hello,.name-tag,#role,.lede,.hero .btns .btn,.stat b,.stat span,.term-bar,.term pre,.mini .n,.mini b,.mini .d,.idx span,.eyebrow,h2,h3,.tab,.by,.no,.card p,.tag,.col .d,.box .k,.box .t,.box .s,.about p,th,td,#certs .wrap > p,#contact p,#contact .btns .btn,footer span';
+    var TYPEQ='.hello,.lede,.eyebrow,.idx span,h2,h3,.by,.card p,.about p,.col .d,.box .k,.box .t,.box .s,.mini .n,.mini b,.mini .d,#certs .wrap > p,#contact p';
     var COLS=['#ff4655','#5aa9ff','#ffd24a','#4ae3c8','#ff7ad9','#9bff6a'];
 
     var layers=[],N=0,built=0,idx=0,lastProg=Date.now(),finished=false,auto=true,speed=2.6,elapsed=0,nextAssign=0,doneAt=0;
